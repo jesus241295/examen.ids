@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="index.js"></script>
+
+        <title>IDS </title>
+    </head>
+    <body>
+        <input type="hidden" value="getName" id="step">
+        <div id="registration-form">
+            <div class='fieldset'>
+                <div class='row' id="divName" >
+                  <label class="welcome">Ingresa tu nombre: </label>
+                  <input type="text" placeholder="Ingresa nombre" id='name' data-required="true" >
+                </div>
+                <div id="welcome" class="content-welcome"></div>
+                <div class='row' id="divProcess" style="display:none;">
+                    <div id="divProduct" class="content-product"></div>
+                    <input type="text" placeholder="product"  id="product" data-required="true">
+                </div>
+
+                <div class='row' id="divMoney" style="display:none;">
+                    <div id="choice"></div>
+                    <input type="number" placeholder="money" id="money" data-required="true">
+                </div>
+                <div id="transaction"></div>
+                <div id="historial" style="display:none;">
+                    <table border class="content-table"><th>Nombre</th>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Efectivo</th>
+                        <th>Cambio</th>
+                        <tbody id="tbHistory">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="content-button">
+                <button id="btnGeneral" onclick="genaralProccess()">Enviar</button>
+                <button id="btnOk" style="display:none;" onclick="init()">Ok</button>
+                <button id="btnExit" style="display:none;" onclick="getHistory()">Salir</button>
+                <button id="btnNew" style="display:none;" onclick="reset()">Iniciar nueva compra</button>
+            </div>
+            </div>
+          </div>
+    </body>
+</html>
